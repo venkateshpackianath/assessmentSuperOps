@@ -1,0 +1,18 @@
+
+<input type="text" id="myInput" [(ngModel)] = "searchText"  placeholder="Search.." >
+
+<table id="myTable">
+  <tr class="header">
+    <td>ID</td>
+    <td>Operations</td>
+    <td>Status</td>
+    <td class = "right">Assigned to</td>
+  </tr>
+  <tr *ngFor = "let data of filteredData">
+    <td>{{data.id}}</td>
+    <td>{{data.operationName}}</td>
+    <td>{{data.status}}</td>
+    <td class = "right">{{data.assignedTo}}</td>
+  </tr>
+</table>
+
